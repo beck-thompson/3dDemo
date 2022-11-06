@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+ <head>
+   <script src="script.js" defer></script>
+ </head>
+  <!-- The style is to disable scrolling -->
+  <body style="height:100%; overflow:hidden;">
+    <title>Graph</title>
+    <div style="display: flex;">
+      <canvas style="outline: 3px dotted black;" id="main_canvas" width="600" height="600"></canvas>
+      <div style="width:20px;"></div>
+      <div>
+        <textarea style="height:100px" id="userinputmatrix" rows="4" cols="30">100,100,100</textarea>
+        <button type="button" id="thebutton">Add vector</button>
+      </div>
+    </div>
+    <div style="padding-top:20px;padding-bottom:10px;">Transformation Matrix:</div>
+    <div style="display:flex; flex-direction: row;">
+      <div>
+        <input type="checkbox" id="matrix_checkbox" checked>
+        <label for="matrix_checkbox"> Apply matrix </label>
+
+        <div style="display:flex; flex-direction: column; padding-top:10px;">
+          <div>
+            <input id = "a1" style="width: 40px;" type="text" />
+            <input id = "a2" style="width: 40px;" type="text" />
+            <input id = "a3" style="width: 40px;" type="text" />
+          </div>
+          <div>
+            <input id = "b1" style="width: 40px;" type="text" />
+            <input id = "b2" style="width: 40px;" type="text" />
+            <input id = "b3" style="width: 40px;" type="text" />
+          </div>
+          <div>
+            <input id = "c1" style="width: 40px;" type="text" />
+            <input id = "c2" style="width: 40px;" type="text" />
+            <input id = "c3" style="width: 40px;" type="text" />
+          </div>
+        </div>
+      </div>
+      <div style="padding-left:20px;">
+        <div>x ranges from -2 to 2</div>
+
+        <div class="slidecontainer">
+          <a>x = </a>
+          <input type="range" min="-2" max="2" value="0" step=".05" id="x">
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
